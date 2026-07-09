@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Stopwatch.module.css"
 
 function Controls(props: {
   onStart: () => void;
@@ -6,7 +7,7 @@ function Controls(props: {
   onReset: () => void;
 }) {
   return (
-    <div>
+    <div className={styles.controls}>
       <Button buttonText="Start" onClick={props.onStart} />
       <Button buttonText="Pause" onClick={props.onPause} />
       <Button buttonText="Reset" onClick={props.onReset} />
@@ -20,7 +21,7 @@ function Button(props: {
   onClick: () => void;
 }) {
   return (
-    <button type="button" onClick={() => props.onClick()}>
+    <button className={styles["controls-buttons"]} type="button" onClick={() => props.onClick()}>
       {props.buttonText}
     </button>
   );
