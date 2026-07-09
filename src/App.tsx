@@ -1,11 +1,9 @@
-import { NavLink, Route, Routes } from 'react-router'
-import './App.css'
-import Home from './Home'
-import Stopwatch from './problems/Stopwatch/Stopwatch'
-
+import { NavLink, Route, Routes } from "react-router";
+import "./App.css";
+import Home from "./Home";
+import { Stopwatch } from "./problems/Stopwatch";
 
 function App() {
-
   return (
     <>
       <nav>
@@ -17,7 +15,7 @@ function App() {
         <Route path="/stopwatch" element={<Stopwatch />} />
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
