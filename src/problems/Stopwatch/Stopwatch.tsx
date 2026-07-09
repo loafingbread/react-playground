@@ -18,38 +18,32 @@ function useTimer(): {
     reset: () => void
 } {
     const [time, setTime] = React.useState(0);
-    const [intervalId, setIntervalId] = React.useState(0);
+    const intervalRef = React.useRef(0);
 
     const start = (): number => {
         pause();
-        console.log("start")
 
-        const _intervalId: number = setInterval(
+        intervalRef.current = setInterval(
             () => {
                 setTime((currentTime: number) => {
-                    console.log(`interval, current: ${currentTime}, next: ${currentTime + 1}`);
-
                     return currentTime + 1
                 });
             },
             1000
         );
 
-        setIntervalId(_intervalId);
-        return _intervalId;
+        return intervalRef.current;
     }
 
     const pause = (newIntervalId?: number) => {
-        console.log(`pause() counter:${newIntervalId || intervalId}`);
-        clearInterval(newIntervalId || intervalId);
+        clearInterval(newIntervalId || intervalRef.current);
     }
 
     React.useEffect(() => {
-        console.log("useEffect")
-        const newIntervalId: number = start();
+        start();
 
         return () => {
-            pause(newIntervalId);
+            pause();
         }
     }, [])
 
