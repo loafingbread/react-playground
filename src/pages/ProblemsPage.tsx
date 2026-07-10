@@ -31,24 +31,25 @@ function ProblemsPage() {
 
   return (
     <main className={styles.page}>
-      <aside>
+      <aside className={styles["sidebar"]}>
         <h2>Problems</h2>
-        <nav>
+        <nav className={styles["nav-vertical"]}>
           {problems.map((problem) => (
             <button
               key={problem.id}
               type="button"
               onClick={() => setSelectedProblemId(problem.id)}
+              className={`styles["nav-button"] ${selectedProblem.id === problem.id ? styles["active-tab"] : ""}`}
             >
               {problem.name}
             </button>
           ))}
         </nav>
       </aside>
-      <section>
+      <section className={styles["contents"]}>
         <h1>{selectedProblem.name}</h1>
         <p>{selectedProblem.description}</p>
-        {selectedProblem.component}
+        <div className={styles["problem"]}>{selectedProblem.component}</div>
       </section>
     </main>
   );
