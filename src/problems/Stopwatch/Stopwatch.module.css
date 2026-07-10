@@ -45,3 +45,7 @@
     border-style: none;
     background-color: green;
 }
+
+.controls-buttons:hover {
+    background-color: lightgreen;
+}

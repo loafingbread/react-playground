@@ -1,27 +1,48 @@
-import React from "react";
-import styles from "./Stopwatch.module.css"
+import React, { type JSX } from "react";
+import styles from "./Stopwatch.module.css";
 
 function Controls(props: {
   onStart: () => void;
   onPause: () => void;
   onReset: () => void;
 }) {
-  return (
-    <div className={styles.controls}>
-      <Button buttonText="Start" onClick={props.onStart} />
-      <Button buttonText="Pause" onClick={props.onPause} />
-      <Button buttonText="Reset" onClick={props.onReset} />
-    </div>
-  );
+  const [inProgress, setInProgress] = React.useState(false);
+
+  const onStart = () => {
+    props.onStart();
+    setInProgress(true);
+  };
+
+  const onReset = () => {
+    props.onReset();
+    props.onPause();
+    setInProgress(false);
+  };
+
+  let buttons: React.ReactNode[] = [];
+  if (!inProgress) {
+    buttons.push([<Button buttonText="Start" onClick={onStart} />]);
+  } else {
+    buttons.push([
+      <Button buttonText="Pause" onClick={props.onPause} />,
+      <Button buttonText="Reset" onClick={onReset} />,
+    ]);
+  }
+
+  return <div className={styles.controls}>{buttons}</div>;
 }
 
 function Button(props: {
   buttonText: string;
-  buttonIcon: string;
+  buttonIcon?: string;
   onClick: () => void;
 }) {
   return (
-    <button className={styles["controls-buttons"]} type="button" onClick={() => props.onClick()}>
+    <button
+      className={styles["controls-buttons"]}
+      type="button"
+      onClick={() => props.onClick()}
+    >
       {props.buttonText}
     </button>
   );
