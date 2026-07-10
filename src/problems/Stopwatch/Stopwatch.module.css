@@ -19,6 +19,7 @@
     /* Set height and make width responsive */
     height: 300px;
     width: 100%;
+    max-width: 300px;
     /* Change cursor on enter */
     cursor: pointer;
 }
@@ -44,6 +45,7 @@
     border-radius: 2rem;
     border-style: none;
     background-color: green;
+    cursor: pointer;
 }
 
 .controls-buttons:hover {
