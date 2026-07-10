@@ -1,53 +1,52 @@
-
 .stopwatch {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    /* Establish positioning context for children */
-    position: relative;
-    background-color: rgb(65, 87, 65);
-    color: aliceblue;
-    padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* Establish positioning context for children */
+  position: relative;
+  background-color: rgb(65, 87, 65);
+  color: aliceblue;
+  padding: 0.5rem;
 }
 
 .clock {
-    /* Center clock display */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Set height and make width responsive */
-    height: 300px;
-    width: 100%;
-    max-width: 300px;
-    /* Change cursor on enter */
-    cursor: pointer;
+  /* Center clock display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Set height and make width responsive */
+  height: 300px;
+  width: 100%;
+  max-width: 300px;
+  /* Change cursor on enter */
+  cursor: pointer;
 }
 
 .time {
-    font-size: 2.5rem;
-    font-variant-numeric: tabular-nums;
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
 }
 
 .controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    gap: 0.5rem;
-    box-sizing: border-box;
-    padding: 0 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
 }
 
 .controls-buttons {
-    flex: 1;
-    padding: 1rem 0;
-    border-radius: 2rem;
-    border-style: none;
-    background-color: green;
-    cursor: pointer;
+  flex: 1;
+  padding: 1rem 0;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: green;
+  cursor: pointer;
 }
 
 .controls-buttons:hover {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
