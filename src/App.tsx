@@ -1,18 +1,18 @@
 import { NavLink, Route, Routes } from "react-router";
 import "./App.css";
 import Home from "./Home";
-import { Stopwatch } from "./problems/Stopwatch";
+import { ProblemsPage } from "./pages";
 
 function App() {
   return (
     <>
       <nav>
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/stopwatch">Stopwatch</NavLink>
+        <NavLink to="/problems">Problems</NavLink>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/stopwatch" element={<Stopwatch />} />
+        <Route path="/problems" element={<ProblemsPage />} />
       </Routes>
     </>
   );
