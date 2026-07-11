@@ -5,3 +5,13 @@
 .accordion > ul {
   list-style-type: none;
 }
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.accordion-header h2 {
+  margin: 0;
+}
