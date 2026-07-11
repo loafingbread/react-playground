@@ -1,0 +1,7 @@
+.accordion {
+  text-align: left;
+}
+
+.accordion > ul {
+  list-style-type: none;
+}

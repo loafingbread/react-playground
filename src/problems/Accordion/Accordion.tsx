@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Accordion.module.css";
 
 type AccordionProps = {
   title: string;
@@ -7,11 +8,11 @@ type AccordionProps = {
 
 function Accordion(props: AccordionProps) {
   return (
-    <div>
+    <div className={styles["accordion"]}>
       <h2>{props.title}</h2>
       <ul>
         {React.Children.map(props.children, (child) => {
-          return child;
+          return <li>{child}</li>;
         })}
       </ul>
     </div>
