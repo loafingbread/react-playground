@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./ProblemsPage.module.css";
 import { Stopwatch } from "../problems/Stopwatch";
+import { Accordion } from "../problems/Accordion";
 
 type Problem = {
   id: string;
@@ -21,6 +22,18 @@ const problems: Problem[] = [
     name: "Timer",
     description: "Build a timer with start, pause, reset controls.",
     component: <div />,
+  },
+  {
+    id: "accordion",
+    name: "Accordion",
+    description: "Build an accordion that collapses and expands",
+    component: (
+      <Accordion title={"Cameras"}>
+        <p>Camera 1</p>
+        <p>Camera 2</p>
+        <p>Camera 3</p>
+      </Accordion>
+    ),
   },
 ];
 
