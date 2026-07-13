@@ -11,12 +11,13 @@ function formatTime(ms: number): string {
 const pad = (n: number) => String(n).padStart(2, "0");
 // output: "01:23.45"
 
-function Clock(props: { timeMs: number }) {
+function Clock(props: { timeMs: number; onClick: () => void }) {
   const formattedTime: string = formatTime(props.timeMs);
 
   return (
     <time
       dateTime={`PT${Math.floor(props.timeMs / 1000)}S`}
+      onClick={props.onClick}
       className={`${styles.clock} ${styles.time}`}
       role="timer"
       aria-live="off" // don't announce every tick

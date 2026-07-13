@@ -1,13 +1,15 @@
 import React from "react";
 
-export function useTimer(): {
+export type TimerT = {
   timeMs: number;
   inProgress: boolean;
   pause: () => void;
   start: () => void;
   reset: () => void;
   toggle: () => void;
-} {
+};
+
+export function useTimer(): TimerT {
   const [timeMs, setTimeMs] = React.useState(0);
   const intervalRef = React.useRef(0);
   const [inProgress, setInProgress] = React.useState(false);

@@ -3,9 +3,9 @@ import styles from "./Stopwatch.module.css";
 
 export type TimerState = {
   inProgress: boolean;
-  start: () => void;
-  pause: () => void;
-  reset: () => void;
+  onStart: () => void;
+  onPause: () => void;
+  onReset: () => void;
 };
 
 type ControlsConfig = {
@@ -15,10 +15,10 @@ type ControlsConfig = {
 function Controls({ timer }: ControlsConfig) {
   let buttonConfigs: ButtonProps[] = timer.inProgress
     ? [
-        { text: "Pause", onClick: timer.pause, "aria-label": "Pause" },
-        { text: "Reset", onClick: timer.reset, "aria-label": "Reset" },
+        { text: "Pause", onClick: timer.onPause, "aria-label": "Pause" },
+        { text: "Reset", onClick: timer.onReset, "aria-label": "Reset" },
       ]
-    : [{ text: "Start", onClick: timer.start, "aria-label": "Start" }];
+    : [{ text: "Start", onClick: timer.onStart, "aria-label": "Start" }];
 
   return (
     <div className={styles.controls}>
