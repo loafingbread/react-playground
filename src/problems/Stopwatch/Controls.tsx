@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Stopwatch.module.css";
+import styles from "./Controls.module.css";
 
 export type TimerState = {
   inProgress: boolean;
@@ -15,10 +15,10 @@ type ControlsConfig = {
 function Controls({ timer }: ControlsConfig) {
   let buttonConfigs: ButtonProps[] = timer.inProgress
     ? [
-        { text: "Pause", onClick: timer.onPause, "aria-label": "Pause" },
-        { text: "Reset", onClick: timer.onReset, "aria-label": "Reset" },
+        { text: "Pause", onClick: timer.onPause, ariaLabel: "Pause" },
+        { text: "Reset", onClick: timer.onReset, ariaLabel: "Reset" },
       ]
-    : [{ text: "Start", onClick: timer.onStart, "aria-label": "Start" }];
+    : [{ text: "Start", onClick: timer.onStart, ariaLabel: "Start" }];
 
   return (
     <div className={styles.controls}>
@@ -33,16 +33,16 @@ type ButtonProps = {
   text: string;
   icon?: React.ReactNode;
   onClick: () => void;
-  "aria-label": string;
+  ariaLabel: string;
 };
 
 function Button(props: ButtonProps) {
   return (
     <button
       type="button"
-      className={styles["controls-buttons"]}
+      className={styles["button"]}
       onClick={props.onClick}
-      aria-label={props["aria-label"]}
+      aria-label={props.ariaLabel}
     >
       {props.icon && (
         <span aria-hidden="true" className={styles["button-icon"]}>

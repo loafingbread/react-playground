@@ -1,0 +1,16 @@
+.clock {
+  /* Center clock display */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Set height and make width responsive */
+  height: clamp(120px, 30vw, 300px);
+  width: 100%;
+  max-width: 300px;
+
+  font-size: 2.5rem;
+  font-variant-numeric: tabular-nums;
+
+  cursor: pointer;
+}

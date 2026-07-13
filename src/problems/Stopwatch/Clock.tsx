@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Stopwatch.module.css";
+import styles from "./Clock.module.css";
 
 function formatTime(ms: number): string {
   const m = Math.floor(ms / 60000);

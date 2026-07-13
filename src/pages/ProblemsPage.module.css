@@ -46,7 +46,6 @@
   }
 
   .nav-vertical {
-    flex-direction: row;
     flex-wrap: wrap;
   }
 }
