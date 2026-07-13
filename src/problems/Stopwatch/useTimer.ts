@@ -1,34 +1,74 @@
 import React from "react";
 
 export function useTimer(): {
-  time: number;
+  timeMs: number;
+  inProgress: boolean;
   pause: () => void;
   start: () => void;
   reset: () => void;
+  toggle: () => void;
 } {
-  const [time, setTime] = React.useState(0);
+  const [timeMs, setTimeMs] = React.useState(0);
   const intervalRef = React.useRef(0);
+  const [inProgress, setInProgress] = React.useState(false);
+  const startedAt = React.useRef<number | null>(null);
+  const accumulated = React.useRef<number>(0);
 
-  const start = (): number => {
+  const start = React.useCallback(() => {
+    // Clear any outstanding timers first
     pause();
 
+    startedAt.current = performance.now();
+
     intervalRef.current = setInterval(() => {
-      setTime((currentTime: number) => {
-        return currentTime + 1;
-      });
-    }, 1000);
+      if (startedAt.current == null) {
+        return;
+      }
 
-    return intervalRef.current;
-  };
+      setTimeMs(accumulated.current + (performance.now() - startedAt.current));
+    }, 10);
 
-  const pause = (newIntervalId?: number) => {
-    clearInterval(newIntervalId || intervalRef.current);
-  };
+    setInProgress(true);
+  }, []);
+
+  const pause = React.useCallback(() => {
+    clearInterval(intervalRef.current);
+
+    accumulated.current +=
+      performance.now() - (startedAt.current ?? performance.now());
+    startedAt.current = null;
+
+    setInProgress(false);
+  }, []);
+
+  const reset = React.useCallback(() => {
+    pause();
+
+    accumulated.current = 0;
+    startedAt.current = null;
+
+    setInProgress(false);
+    setTimeMs(0);
+  }, []);
+
+  const toggle = React.useCallback(() => {
+    if (inProgress) {
+      pause();
+    } else {
+      start();
+    }
+  }, [inProgress, pause, start]);
+
+  React.useEffect(() => {
+    return () => pause();
+  }, []);
 
   return {
-    time,
-    pause: () => pause(),
-    start: () => start(),
-    reset: () => setTime(0),
+    timeMs,
+    inProgress,
+    pause,
+    start,
+    reset,
+    toggle,
   };
 }

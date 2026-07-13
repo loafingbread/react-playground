@@ -1,49 +1,55 @@
-import React, { type JSX } from "react";
+import React from "react";
 import styles from "./Stopwatch.module.css";
 
-function Controls(props: {
-  onStart: () => void;
-  onPause: () => void;
-  onReset: () => void;
-}) {
-  const [inProgress, setInProgress] = React.useState(false);
+export type TimerState = {
+  inProgress: boolean;
+  start: () => void;
+  pause: () => void;
+  reset: () => void;
+};
 
-  const onStart = () => {
-    props.onStart();
-    setInProgress(true);
-  };
+type ControlsConfig = {
+  timer: TimerState;
+};
 
-  const onReset = () => {
-    props.onReset();
-    props.onPause();
-    setInProgress(false);
-  };
+function Controls({ timer }: ControlsConfig) {
+  let buttonConfigs: ButtonProps[] = timer.inProgress
+    ? [
+        { text: "Pause", onClick: timer.pause, "aria-label": "Pause" },
+        { text: "Reset", onClick: timer.reset, "aria-label": "Reset" },
+      ]
+    : [{ text: "Start", onClick: timer.start, "aria-label": "Start" }];
 
-  let buttons: React.ReactNode[] = [];
-  if (!inProgress) {
-    buttons.push([<Button buttonText="Start" onClick={onStart} />]);
-  } else {
-    buttons.push([
-      <Button buttonText="Pause" onClick={props.onPause} />,
-      <Button buttonText="Reset" onClick={onReset} />,
-    ]);
-  }
-
-  return <div className={styles.controls}>{buttons}</div>;
+  return (
+    <div className={styles.controls}>
+      {buttonConfigs.map((config) => (
+        <Button key={config.text} {...config} />
+      ))}
+    </div>
+  );
 }
 
-function Button(props: {
-  buttonText: string;
-  buttonIcon?: string;
+type ButtonProps = {
+  text: string;
+  icon?: React.ReactNode;
   onClick: () => void;
-}) {
+  "aria-label": string;
+};
+
+function Button(props: ButtonProps) {
   return (
     <button
-      className={styles["controls-buttons"]}
       type="button"
-      onClick={() => props.onClick()}
+      className={styles["controls-buttons"]}
+      onClick={props.onClick}
+      aria-label={props["aria-label"]}
     >
-      {props.buttonText}
+      {props.icon && (
+        <span aria-hidden="true" className={styles["button-icon"]}>
+          {props.icon}
+        </span>
+      )}
+      <span>{props.text}</span>
     </button>
   );
 }

@@ -52,7 +52,7 @@ function ProblemsPage() {
               key={problem.id}
               type="button"
               onClick={() => setSelectedProblemId(problem.id)}
-              className={`styles["nav-button"] ${selectedProblem.id === problem.id ? styles["active-tab"] : ""}`}
+              className={`${styles["nav-button"]} ${selectedProblem.id === problem.id ? styles["active-tab"] : ""}`}
             >
               {problem.name}
             </button>
