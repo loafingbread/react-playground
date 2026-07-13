@@ -4,11 +4,18 @@ import { useTimer, type TimerT } from "./useTimer";
 import Clock from "./Clock";
 import Controls from "./Controls";
 
-function Stopwatch() {
+interface StopwatchStyle extends React.CSSProperties {
+  "--surface-bg"?: string;
+  "--on-surface"?: string;
+  "--button-bg"?: string;
+  "--button-bg-hover"?: string;
+}
+
+function Stopwatch(props: { style: StopwatchStyle }) {
   const timer: TimerT = useTimer();
 
   return (
-    <div className={styles.stopwatch}>
+    <div className={styles.stopwatch} style={props.style}>
       <Clock timeMs={timer.timeMs} onClick={timer.toggle} />
       <Controls
         timer={{

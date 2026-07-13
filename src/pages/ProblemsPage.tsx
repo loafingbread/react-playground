@@ -15,7 +15,7 @@ const problems: Problem[] = [
     id: "stopwatch",
     name: "Stopwatch",
     description: "Build a stopwatch with start, pause, reset controls.",
-    component: <Stopwatch />,
+    component: <Stopwatch style={{}} />,
   },
   {
     id: "timer",

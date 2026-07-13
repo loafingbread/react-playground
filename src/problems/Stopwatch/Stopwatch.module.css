@@ -1,5 +1,5 @@
 .stopwatch {
-  --surface: #415741;
+  --surface-bg: #415741;
   --on-surface: aliceblue;
   --button-bg: #2d6a2d;
   --button-bg-hover: #4a9e4a;
@@ -12,6 +12,6 @@
   padding: 1.5rem;
   border-radius: 0.5rem;
 
-  background-color: var(--surface);
+  background-color: var(--surface-bg);
   color: var(--on-surface);
 }
