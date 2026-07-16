@@ -1,5 +1,19 @@
 import React from "react";
-import styles from "./SkillCard.module.css";
+import styles from "./SkillsSection.module.css";
+
+export type SkillsSectionProps = {
+  skills: SkillCardProps[];
+};
+
+function SkillsSection(props: SkillsSectionProps) {
+  return (
+    <div className={styles.skillsSection}>
+      {props.skills.map((skill) => {
+        return <SkillCard key={skill.title} {...skill} />;
+      })}
+    </div>
+  );
+}
 
 type SkillCardProps = {
   title: string;
@@ -25,4 +39,4 @@ function SkillCard(props: SkillCardProps) {
   );
 }
 
-export default SkillCard;
+export default SkillsSection;
