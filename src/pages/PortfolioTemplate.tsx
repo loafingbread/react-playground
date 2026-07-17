@@ -1,12 +1,17 @@
 import React from "react";
 import styles from "./PortfolioTemplate.module.css";
 import HeaderImage from "../assets/HeaderImage_1.png";
-import Rectangle_1181 from "../assets/Rectangle_1181.png";
 import Skill_Icon from "../assets/portfolio/Skill_Icon.svg";
 import Skill_Icon_2 from "../assets/portfolio/Skill_Icon_2.svg";
 import Skill_Icon_3 from "../assets/portfolio/Skill_Icon_3.svg";
 import Skill_Icon_4 from "../assets/portfolio/Skill_Icon_4.svg";
-import { SkillsSection } from "../problems/Portfolio";
+import ProjectImage from "../assets/portfolio/Project.png";
+import ProjectImage_2 from "../assets/portfolio/Project_2.png";
+import ProjectImage_3 from "../assets/portfolio/Project_3.png";
+import ProjectImage_4 from "../assets/portfolio/Project_4.png";
+import ProjectImage_5 from "../assets/portfolio/Project_5.png";
+import ProjectImage_6 from "../assets/portfolio/Project_6.png";
+import { SkillsSection, WorkSection } from "../problems/Portfolio";
 
 function PortfolioTemplate() {
   return (
@@ -66,6 +71,41 @@ function PortfolioTemplate() {
             title: "UI/UX",
             description:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+        ]}
+      />
+      <WorkSection
+        title="Latest work"
+        projects={[
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage,
+          },
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage_2,
+          },
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage_3,
+          },
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage_4,
+          },
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage_5,
+          },
+          {
+            title: "Project title",
+            description: "UI, Art direction",
+            image: ProjectImage_6,
           },
         ]}
       />
