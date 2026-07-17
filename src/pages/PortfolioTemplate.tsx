@@ -12,6 +12,7 @@ function PortfolioTemplate() {
   return (
     <main className={styles.portfolio}>
       <SkillsSection
+        variant="horizontal"
         skills={[
           {
             icon: Skill_Icon,
