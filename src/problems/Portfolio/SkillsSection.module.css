@@ -1,27 +1,50 @@
 .skillsSection {
-  display: flex;
+  display: grid;
   gap: var(--space-5);
+
+  width: 100%;
 }
 
 .skillCard {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   gap: var(--space-7);
 
-  width: 100%;
   padding: var(--space-9) var(--space-7);
+}
+
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+}
+
+.list {
+  grid-template-columns: repeat(auto-fit, minmax(min(600px, 100%), 1fr));
 }
 
 .vertical {
   flex-direction: column;
+  align-items: center;
+
+  & .textContainer {
+    text-align: center;
+  }
 }
 
 .horizontal {
   flex-direction: row;
+  align-items: flex-start;
+
+  & .icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  & .textContainer {
+    text-align: left;
+  }
 }
 
 .icon {
+  flex-shrink: 0;
   width: 124px;
   height: 124px;
 }
@@ -29,10 +52,8 @@
 .textContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: var(--space-3);
-
-  text-align: center;
 }
 
 .title {

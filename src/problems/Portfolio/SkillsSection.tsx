@@ -1,29 +1,41 @@
 import React from "react";
 import styles from "./SkillsSection.module.css";
 
-export type SkillCardVariant = "vertical" | "horizontal";
+export type SkillsSectionLayout = "grid" | "list";
+
+export type SkillData = {
+  title: string;
+  description: string;
+  icon: string;
+};
 
 export type SkillsSectionProps = {
-  variant: SkillCardVariant;
-  skills: SkillCardProps[];
+  layout: SkillsSectionLayout;
+  skills: SkillData[];
 };
 
 function SkillsSection(props: SkillsSectionProps) {
   return (
-    <div className={styles.skillsSection}>
+    <section
+      className={`${styles.skillsSection} ${styles[props.layout]}`}
+      aria-label="Skills"
+    >
       {props.skills.map((skill) => {
         return (
-          <SkillCard key={skill.title} {...skill} variant={props.variant} />
+          <SkillCard
+            key={skill.title}
+            {...skill}
+            variant={props.layout === "grid" ? "vertical" : "horizontal"}
+          />
         );
       })}
-    </div>
+    </section>
   );
 }
 
-type SkillCardProps = {
-  title: string;
-  description: string;
-  icon: string;
+type SkillCardVariant = "vertical" | "horizontal";
+
+type SkillCardProps = SkillData & {
   variant: SkillCardVariant;
 };
 

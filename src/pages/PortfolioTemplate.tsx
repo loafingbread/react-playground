@@ -12,7 +12,36 @@ function PortfolioTemplate() {
   return (
     <main className={styles.portfolio}>
       <SkillsSection
-        variant="horizontal"
+        layout="grid"
+        skills={[
+          {
+            icon: Skill_Icon,
+            title: "Product Design",
+            description:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            icon: Skill_Icon_2,
+            title: "Visual Design",
+            description:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            icon: Skill_Icon_3,
+            title: "Art Direction",
+            description:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            icon: Skill_Icon_4,
+            title: "UI/UX",
+            description:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+        ]}
+      />
+      <SkillsSection
+        layout="list"
         skills={[
           {
             icon: Skill_Icon,
