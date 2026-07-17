@@ -17,8 +17,8 @@ function WorkSection(props: WorkSectionProps) {
     <section className={styles.workSection}>
       <h2 className={styles.workSectionTitle}>{props.title}</h2>
       <div className={styles.projectsContainer}>
-        {props.projects.map((project) => {
-          return <Project key={project.title} {...project} />;
+        {props.projects.map((project, index) => {
+          return <Project key={index} {...project} />;
         })}
       </div>
     </section>
