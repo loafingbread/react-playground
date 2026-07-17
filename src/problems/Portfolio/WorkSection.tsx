@@ -14,7 +14,7 @@ export type WorkSectionProps = {
 
 function WorkSection(props: WorkSectionProps) {
   return (
-    <section className={styles.workSection}>
+    <section className={styles.workSection} aria-lable="Latest work">
       <h2 className={styles.workSectionTitle}>{props.title}</h2>
       <div className={styles.projectsContainer}>
         {props.projects.map((project, index) => {
@@ -28,9 +28,13 @@ function WorkSection(props: WorkSectionProps) {
 function Project(props: ProjectData) {
   return (
     <article className={styles.project}>
-      <img className={styles.projectImage} src={props.image} alt="" />
+      <img
+        className={styles.projectImage}
+        src={props.image}
+        alt={`${props.title} project preview`}
+      />
       <div className={styles.projectTextContainer}>
-        <h6 className={styles.projectTitle}>{props.title}</h6>
+        <h3 className={styles.projectTitle}>{props.title}</h3>
         <p className={styles.projectDescription}>{props.description}</p>
       </div>
     </article>
