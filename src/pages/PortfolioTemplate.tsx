@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./PortfolioTemplate.module.css";
 import HeaderImage from "../assets/HeaderImage_1.png";
+import UserImage from "../assets/portfolio/User_Image.png";
 import Skill_Icon from "../assets/portfolio/Skill_Icon.svg";
 import Skill_Icon_2 from "../assets/portfolio/Skill_Icon_2.svg";
 import Skill_Icon_3 from "../assets/portfolio/Skill_Icon_3.svg";
@@ -11,7 +12,11 @@ import ProjectImage_3 from "../assets/portfolio/Project_3.png";
 import ProjectImage_4 from "../assets/portfolio/Project_4.png";
 import ProjectImage_5 from "../assets/portfolio/Project_5.png";
 import ProjectImage_6 from "../assets/portfolio/Project_6.png";
-import { SkillsSection, WorkSection } from "../problems/Portfolio";
+import {
+  SkillsSection,
+  TestimonialSection,
+  WorkSection,
+} from "../problems/Portfolio";
 
 function PortfolioTemplate() {
   return (
@@ -106,6 +111,59 @@ function PortfolioTemplate() {
             title: "Project title",
             description: "UI, Art direction",
             image: ProjectImage_6,
+          },
+        ]}
+      />
+      <TestimonialSection
+        title="Testimonial"
+        testimonials={[
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+          },
+          {
+            name: "Gemma Nolan",
+            image: UserImage,
+            affiliation: "Google",
+            rating: 5,
+            review:
+              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },
         ]}
       />
