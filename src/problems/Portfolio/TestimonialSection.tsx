@@ -35,17 +35,21 @@ type TestimionialProps = TestimonialData;
 function Testimonial(props: TestimionialProps) {
   return (
     <article className={styles.testimonial} aria-label="Testimonial">
-      <p className={styles.testimonialReview}></p>
+      <p className={styles.testimonialReview}>{props.review}</p>
       <div className={styles.userProfile}>
         <img
           src={props.image}
           className={styles.userImage}
+          width={50}
+          height={50}
           alt="User profile"
         />
         <div className={styles.userRatingContainer}>
           <RatingStars rating={props.rating} />
-          <span className={styles.userName}>{props.name}</span>
-          <span className={styles.userAffiliation}>{props.affiliation}</span>
+          <div className={styles.userContainer}>
+            <span className={styles.userName}>{props.name}</span>
+            <span className={styles.userAffiliation}>{props.affiliation}</span>
+          </div>
         </div>
       </div>
     </article>
