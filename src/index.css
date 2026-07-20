@@ -10,8 +10,6 @@ ol {
 }
 
 :root {
-  /* color-scheme: light; */
-
   /* Spacing scale — each step ~1.5x the previous */
   --space-1: 0.25rem; /* 4px  */
   --space-2: 0.5rem; /* 8px  */
@@ -57,7 +55,7 @@ ol {
 @media (prefers-color-scheme: dark) {
   :root {
     --text: #9ca3af;
-    --text-h: #f3f4f6;
+    /* --text-h: #f3f4f6; */
     --bg: #16171d;
     --border: #2e303a;
     --code-bg: #1f2028;
