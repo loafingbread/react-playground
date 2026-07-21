@@ -129,7 +129,7 @@ function PortfolioTemplate() {
             name: "Gemma Nolan",
             image: UserImage,
             affiliation: "Google",
-            rating: 5,
+            rating: 4,
             review:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },
@@ -137,7 +137,7 @@ function PortfolioTemplate() {
             name: "Gemma Nolan",
             image: UserImage,
             affiliation: "Google",
-            rating: 5,
+            rating: 3,
             review:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },
@@ -145,7 +145,7 @@ function PortfolioTemplate() {
             name: "Gemma Nolan",
             image: UserImage,
             affiliation: "Google",
-            rating: 5,
+            rating: 2,
             review:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },
@@ -153,7 +153,7 @@ function PortfolioTemplate() {
             name: "Gemma Nolan",
             image: UserImage,
             affiliation: "Google",
-            rating: 5,
+            rating: 1,
             review:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },
@@ -161,7 +161,7 @@ function PortfolioTemplate() {
             name: "Gemma Nolan",
             image: UserImage,
             affiliation: "Google",
-            rating: 5,
+            rating: 0,
             review:
               "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
           },

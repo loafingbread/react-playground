@@ -1,4 +1,5 @@
 import React from "react";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import styles from "./TestimonialSection.module.css";
 
 export type TestimonialData = {
@@ -63,7 +64,13 @@ type RatingStarsProps = {
 function RatingStars(props: RatingStarsProps) {
   return (
     <div className={styles.userRating} arial-label="rating stars out of five">
-      {props.rating}
+      {Array.from({ length: 5 }, (_: undefined, i: number) => {
+        if (i < props.rating) {
+          return <FaStar key={i} />;
+        }
+
+        return <FaRegStar key={i} />;
+      })}
     </div>
   );
 }
