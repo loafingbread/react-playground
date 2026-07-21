@@ -13,6 +13,7 @@ import ProjectImage_4 from "../assets/portfolio/Project_4.png";
 import ProjectImage_5 from "../assets/portfolio/Project_5.png";
 import ProjectImage_6 from "../assets/portfolio/Project_6.png";
 import {
+  ContactSection,
   SkillsSection,
   TestimonialSection,
   WorkSection,
@@ -167,6 +168,7 @@ function PortfolioTemplate() {
           },
         ]}
       />
+      <ContactSection />
     </main>
     // <main className={styles["portfolio"]}>
     //   <nav className={styles["nav"]}>

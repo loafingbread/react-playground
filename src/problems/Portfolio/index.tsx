@@ -9,3 +9,5 @@ export type { ProjectData, WorkSectionProps } from "./WorkSection";
 export { default as WorkSection } from "./WorkSection";
 
 export { default as TestimonialSection } from "./TestimonialSection";
+
+export { default as ContactSection } from "./ContactSection";
