@@ -40,7 +40,7 @@ function ContactSection() {
               <img
                 className={styles.socialMediaIcon}
                 src={FacebookIcon}
-                alt="Discord"
+                alt="Facebook"
                 height={36}
                 width={36}
               />
@@ -49,7 +49,7 @@ function ContactSection() {
               <img
                 className={styles.socialMediaIcon}
                 src={DribbleIcon}
-                alt="Discord"
+                alt="Dribble"
                 height={36}
                 width={36}
               />
@@ -58,7 +58,7 @@ function ContactSection() {
               <img
                 className={styles.socialMediaIcon}
                 src={InstagramIcon}
-                alt="Discord"
+                alt="Instagram"
                 height={36}
                 width={36}
               />
@@ -67,15 +67,15 @@ function ContactSection() {
               <img
                 className={styles.socialMediaIcon}
                 src={BehanceIcon}
-                alt="Discord"
+                alt="Behance"
                 height={36}
                 width={36}
               />
             </a>
           </div>
         </div>
+        <ContactForm onSubmit={submitForm} />
       </div>
-      <ContactForm onSubmit={submitForm} />
     </section>
   );
 }
@@ -87,33 +87,37 @@ type ContactFormProps = {
 function ContactForm(props: ContactFormProps) {
   return (
     <form className={styles.contactForm} onSubmit={props.onSubmit}>
-      <div className={styles.formField}>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="text"
-          name="name"
-          autoComplete="name"
-          required
-          aria-required={true}
-        />
-      </div>
-      <div className={styles.formField}>
-        <label htmlFor="name">Email</label>
-        <input
-          id="email"
-          type="email"
-          name="email"
-          autoComplete="email"
-          required
-          aria-required={true}
-          aria-describedby="email-hint"
-        />
-        <span id="email-hint" className={styles.formFieldHint}>
+      <section className={styles.formFields}>
+        <article className={styles.formField}>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Name"
+            autoComplete="name"
+            required
+            aria-required={true}
+          />
+        </article>
+        <article className={styles.formField}>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+            autoComplete="email"
+            required
+            aria-required={true}
+            aria-describedby="email-hint"
+          />
+          {/* <span id="email-hint" className={styles.formFieldHint}>
           We'll never share your email.
-        </span>
-      </div>
-      <button type="submit">Submit</button>
+        </span> */}
+        </article>
+      </section>
+      <button type="submit" className={styles.submitButton}>
+        Submit
+      </button>
     </form>
   );
 }
