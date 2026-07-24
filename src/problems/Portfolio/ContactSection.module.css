@@ -1,4 +1,9 @@
 .contactSection {
+  --form-field-bg: #f3f3f3;
+  --form-field-color: #2d2d2d;
+  --form-submit-bg: #2d2d2d;
+  --form-submit-color: white;
+
   display: flex;
   flex-direction: column;
   gap: var(--space-5);
@@ -13,10 +18,12 @@
 
 .contactSectionContents {
   display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-9);
 }
 
 .contactInformation {
-  flex: 1 1 0;
+  flex: 2 1 0;
   display: flex;
   flex-direction: column;
   gap: var(--space-7);
@@ -43,6 +50,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-5);
+
+  min-width: 300px;
 }
 
 .formFields {
@@ -52,8 +61,23 @@
 }
 
 .formField {
+  padding: var(--space-4) var(--space-5);
+
+  background-color: var(--form-field-bg);
+  color: var(--form-field-color);
+
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 .submitButton {
   padding: var(--space-5) var(--space-9);
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  background-color: var(--form-submit-bg);
+  color: var(--form-submit-color);
 }

@@ -88,8 +88,9 @@ function ContactForm(props: ContactFormProps) {
   return (
     <form className={styles.contactForm} onSubmit={props.onSubmit}>
       <section className={styles.formFields}>
-        <article className={styles.formField}>
+        <article className={styles.formFieldContainer}>
           <input
+            className={styles.formField}
             id="name"
             type="text"
             name="name"
@@ -99,8 +100,9 @@ function ContactForm(props: ContactFormProps) {
             aria-required={true}
           />
         </article>
-        <article className={styles.formField}>
+        <article className={styles.formFieldContainer}>
           <input
+            className={styles.formField}
             id="email"
             type="email"
             name="email"
