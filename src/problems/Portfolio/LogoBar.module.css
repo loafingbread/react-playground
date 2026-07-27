@@ -2,9 +2,13 @@
   display: flex;
   gap: var(--space-10);
   justify-content: space-around;
-  flex-wrap: wrap;
-}
+  overflow-x: auto;
+  padding: var(--space-3) 0;
+  scrollbar-width: none;
 
-.logo {
-  flex: 0 0 0;
+  & img {
+    display: block;
+    height: clamp(24px, 4vw, 40px);
+    width: auto;
+  }
 }

@@ -8,13 +8,23 @@ import LogoSamsung from "../../assets/portfolio/Logo_Samsung.svg";
 
 function LogoBar() {
   return (
-    <section className={styles.logoBar} aria-label="Logo Bar">
-      <img className={styles.logo} src={LogoGoogle} alt="Google" />
-      <img className={styles.logo} src={LogoNike} alt="Nike" />
-      <img className={styles.logo} src={LogoSamsung} alt="Samsung" />
-      <img className={styles.logo} src={LogoApple} alt="Apple" />
-      <img className={styles.logo} src={LogoAdidas} alt="Adidas" />
-    </section>
+    <ul className={styles.logoBar} aria-label="Sponsors">
+      <li>
+        <img src={LogoGoogle} alt="Google" height={40} />
+      </li>
+      <li>
+        <img src={LogoNike} alt="Nike" height={40} />
+      </li>
+      <li>
+        <img src={LogoSamsung} alt="Samsung" height={40} />
+      </li>
+      <li>
+        <img src={LogoApple} alt="Apple" height={40} />
+      </li>
+      <li>
+        <img src={LogoAdidas} alt="Adidas" height={40} />
+      </li>
+    </ul>
   );
 }
 
