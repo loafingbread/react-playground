@@ -1,0 +1,10 @@
+.logoBar {
+  display: flex;
+  gap: var(--space-10);
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.logo {
+  flex: 0 0 0;
+}
