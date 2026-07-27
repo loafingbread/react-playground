@@ -14,9 +14,16 @@ function HeaderSection() {
             more at AnimaApp.com
           </p>
         </div>
-        <button type="button">Contact</button>
+        <button className={styles.contactButton} type="button">
+          Contact
+        </button>
       </div>
-      <img src={HeaderImage} alt="Photo" height={360} />
+      <img
+        className={styles.profilePhoto}
+        src={HeaderImage}
+        alt="Photo"
+        height={360}
+      />
     </section>
   );
 }

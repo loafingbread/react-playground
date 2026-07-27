@@ -1,0 +1,54 @@
+.headerSection {
+  display: flex;
+  gap: var(--space-9);
+
+  & h1 {
+    margin: 0;
+
+    font-size: 4.2rem;
+    line-height: normal;
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+
+  text-align: left;
+}
+
+.introSubSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.caption {
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.contactButton {
+  align-self: flex-start;
+
+  box-sizing: border-box;
+  padding: var(--space-5) var(--space-9);
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.profilePhoto {
+  display: block;
+
+  height: 360px;
+  width: auto;
+}
