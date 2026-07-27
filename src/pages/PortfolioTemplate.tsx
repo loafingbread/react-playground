@@ -14,6 +14,7 @@ import ProjectImage_5 from "../assets/portfolio/Project_5.png";
 import ProjectImage_6 from "../assets/portfolio/Project_6.png";
 import {
   ContactSection,
+  LogoBar,
   SkillsSection,
   TestimonialSection,
   WorkSection,
@@ -22,6 +23,7 @@ import {
 function PortfolioTemplate() {
   return (
     <main className={styles.portfolio}>
+      <LogoBar />
       <SkillsSection
         layout="grid"
         skills={[

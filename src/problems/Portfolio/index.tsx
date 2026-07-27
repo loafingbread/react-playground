@@ -11,3 +11,5 @@ export { default as WorkSection } from "./WorkSection";
 export { default as TestimonialSection } from "./TestimonialSection";
 
 export { default as ContactSection } from "./ContactSection";
+
+export { default as LogoBar } from "./LogoBar";
