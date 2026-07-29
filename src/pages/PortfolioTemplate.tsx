@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./PortfolioTemplate.module.css";
-import HeaderImage from "../assets/HeaderImage_1.png";
 import UserImage from "../assets/portfolio/User_Image.png";
 import Skill_Icon from "../assets/portfolio/Skill_Icon.svg";
 import Skill_Icon_2 from "../assets/portfolio/Skill_Icon_2.svg";
@@ -15,6 +14,7 @@ import ProjectImage_6 from "../assets/portfolio/Project_6.png";
 import {
   ContactSection,
   HeaderSection,
+  HeaderSectionAlt,
   LogoBar,
   SkillsSection,
   TestimonialSection,
@@ -25,6 +25,7 @@ function PortfolioTemplate() {
   return (
     <main className={styles.portfolio}>
       <HeaderSection />
+      <HeaderSectionAlt />
       <LogoBar />
       <SkillsSection
         layout="grid"

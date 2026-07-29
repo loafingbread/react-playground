@@ -14,4 +14,4 @@ export { default as ContactSection } from "./ContactSection";
 
 export { default as LogoBar } from "./LogoBar";
 
-export { default as HeaderSection } from "./HeaderSection";
+export { default as HeaderSection, HeaderSectionAlt } from "./HeaderSection";

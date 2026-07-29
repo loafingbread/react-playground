@@ -1,12 +1,25 @@
 .headerSection {
   display: flex;
   gap: var(--space-9);
+  justify-content: space-between;
 
   & h1 {
     margin: 0;
 
     font-size: 4.2rem;
     line-height: normal;
+  }
+
+  &.alt {
+    gap: var(--space-10);
+  }
+
+  &.alt .intro {
+    text-align: center;
+  }
+
+  &.alt .contactButton {
+    align-self: center;
   }
 }
 
@@ -16,6 +29,20 @@
   gap: var(--space-8);
 
   text-align: left;
+}
+
+.verticalBorder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  & .imageArrow {
+  }
+
+  & .imageRect {
+    width: 150px;
+    height: auto;
+  }
 }
 
 .introSubSection {
