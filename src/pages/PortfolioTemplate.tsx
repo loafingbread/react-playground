@@ -19,162 +19,170 @@ import {
   SkillsSection,
   TestimonialSection,
   WorkSection,
+  Navigation,
 } from "../problems/Portfolio";
 
 function PortfolioTemplate() {
   return (
-    <main className={styles.portfolio}>
-      <HeaderSection />
-      <HeaderSectionAlt />
-      <LogoBar />
-      <SkillsSection
-        layout="grid"
-        skills={[
-          {
-            icon: Skill_Icon,
-            title: "Product Design",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_2,
-            title: "Visual Design",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_3,
-            title: "Art Direction",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_4,
-            title: "UI/UX",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-        ]}
-      />
-      <SkillsSection
-        layout="list"
-        skills={[
-          {
-            icon: Skill_Icon,
-            title: "Product Design",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_2,
-            title: "Visual Design",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_3,
-            title: "Art Direction",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            icon: Skill_Icon_4,
-            title: "UI/UX",
-            description:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-        ]}
-      />
-      <WorkSection
-        title="Latest work"
-        projects={[
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage,
-          },
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage_2,
-          },
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage_3,
-          },
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage_4,
-          },
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage_5,
-          },
-          {
-            title: "Project title",
-            description: "UI, Art direction",
-            image: ProjectImage_6,
-          },
-        ]}
-      />
-      <TestimonialSection
-        title="Testimonial"
-        testimonials={[
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 5,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 4,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 3,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 2,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 1,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-          {
-            name: "Gemma Nolan",
-            image: UserImage,
-            affiliation: "Google",
-            rating: 0,
-            review:
-              "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-          },
-        ]}
-      />
-      <ContactSection />
-    </main>
+    <div className={styles.portfolioWrapper}>
+      <header>
+        <Navigation />
+      </header>
+      <main className={styles.portfolio}>
+        <HeaderSection />
+        <HeaderSectionAlt />
+        <LogoBar />
+        <SkillsSection
+          layout="grid"
+          skills={[
+            {
+              icon: Skill_Icon,
+              title: "Product Design",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_2,
+              title: "Visual Design",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_3,
+              title: "Art Direction",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_4,
+              title: "UI/UX",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+          ]}
+        />
+        <SkillsSection
+          layout="list"
+          skills={[
+            {
+              icon: Skill_Icon,
+              title: "Product Design",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_2,
+              title: "Visual Design",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_3,
+              title: "Art Direction",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              icon: Skill_Icon_4,
+              title: "UI/UX",
+              description:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+          ]}
+        />
+        <WorkSection
+          title="Latest work"
+          projects={[
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage,
+            },
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage_2,
+            },
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage_3,
+            },
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage_4,
+            },
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage_5,
+            },
+            {
+              title: "Project title",
+              description: "UI, Art direction",
+              image: ProjectImage_6,
+            },
+          ]}
+        />
+        <TestimonialSection
+          title="Testimonial"
+          testimonials={[
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 5,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 4,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 3,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 2,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 1,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+            {
+              name: "Gemma Nolan",
+              image: UserImage,
+              affiliation: "Google",
+              rating: 0,
+              review:
+                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            },
+          ]}
+        />
+      </main>
+      <footer>
+        <ContactSection />
+      </footer>
+    </div>
     // <main className={styles["portfolio"]}>
     //   <nav className={styles["nav"]}>
     //     <ul className={styles["nav__links"]}>
