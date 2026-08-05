@@ -1,9 +1,9 @@
 .logoBar {
   display: flex;
   gap: var(--space-10);
-  justify-content: space-around;
+  justify-content: space-between;
   overflow-x: auto;
-  padding: var(--space-3) 0;
+  padding: var(--space-3) var(--space-5);
   scrollbar-width: none;
 
   & img {

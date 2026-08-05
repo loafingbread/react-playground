@@ -1,8 +1,7 @@
 .headerSection {
   display: flex;
   gap: var(--space-9);
-  justify-content: space-around;
-
+  justify-content: space-between;
 
   & h1 {
     margin: 0;
@@ -79,4 +78,5 @@
 
   height: 360px;
   width: auto;
+  margin-right: var(--space-10);
 }

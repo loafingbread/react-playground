@@ -22,7 +22,8 @@
 
 .projectsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
+  /* grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: var(--space-5);
 }
 
@@ -38,7 +39,6 @@
   flex-shrink: 0;
   object-fit: cover;
   width: 100%;
-  max-width: 400px;
   height: auto;
   max-height: 400px;
 }

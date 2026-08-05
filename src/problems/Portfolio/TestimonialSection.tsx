@@ -17,17 +17,19 @@ export type TestimonialSectionProps = {
 
 function TestimonialSection(props: TestimonialSectionProps) {
   return (
-    <section
-      className={styles.testimonialSection}
-      aria-label="Testimonial Section"
-    >
-      <h2 className={styles.testimonialSectionTitle}>{props.title}</h2>
-      <div className={styles.testimonials} aria-label="Testimonials List">
-        {props.testimonials.map((testimonial, index) => {
-          return <Testimonial key={index} {...testimonial} />;
-        })}
-      </div>
-    </section>
+    <div className="container">
+      <section
+        className={styles.testimonialSection}
+        aria-label="Testimonial Section"
+      >
+        <h2 className={styles.testimonialSectionTitle}>{props.title}</h2>
+        <div className={styles.testimonials} aria-label="Testimonials List">
+          {props.testimonials.map((testimonial, index) => {
+            return <Testimonial key={index} {...testimonial} />;
+          })}
+        </div>
+      </section>
+    </div>
   );
 }
 

@@ -16,20 +16,22 @@ export type SkillsSectionProps = {
 
 function SkillsSection(props: SkillsSectionProps) {
   return (
-    <section
-      className={`${styles.skillsSection} ${styles[props.layout]}`}
-      aria-label="Skills"
-    >
-      {props.skills.map((skill) => {
-        return (
-          <SkillCard
-            key={skill.title}
-            {...skill}
-            variant={props.layout === "grid" ? "vertical" : "horizontal"}
-          />
-        );
-      })}
-    </section>
+    <div className="container">
+      <section
+        className={`${styles.skillsSection} ${styles[props.layout]}`}
+        aria-label="Skills"
+      >
+        {props.skills.map((skill) => {
+          return (
+            <SkillCard
+              key={skill.title}
+              {...skill}
+              variant={props.layout === "grid" ? "vertical" : "horizontal"}
+            />
+          );
+        })}
+      </section>
+    </div>
   );
 }
 

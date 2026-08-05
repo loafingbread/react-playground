@@ -30,7 +30,7 @@ function PortfolioTemplate() {
       </header>
       <main className={styles.portfolio}>
         <HeaderSection />
-        <HeaderSectionAlt />
+        {/* <HeaderSectionAlt /> */}
         <LogoBar />
         <SkillsSection
           layout="grid"
@@ -53,15 +53,15 @@ function PortfolioTemplate() {
               description:
                 "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
             },
-            {
-              icon: Skill_Icon_4,
-              title: "UI/UX",
-              description:
-                "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
-            },
+            // {
+            //   icon: Skill_Icon_4,
+            //   title: "UI/UX",
+            //   description:
+            //     "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
+            // },
           ]}
         />
-        <SkillsSection
+        {/* <SkillsSection
           layout="list"
           skills={[
             {
@@ -89,7 +89,7 @@ function PortfolioTemplate() {
                 "This is a template Figma file, turned into code using Anima. Learn more at AnimaApp.com",
             },
           ]}
-        />
+        /> */}
         <WorkSection
           title="Latest work"
           projects={[

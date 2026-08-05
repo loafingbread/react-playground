@@ -17,66 +17,68 @@ function ContactSection() {
   };
 
   return (
-    <section className={styles.contactSection} aria-label="Contact Section">
-      <h2 className={styles.contactSectionHeader}>Lets work together</h2>
-      <div className={styles.contactSectionContents}>
-        <div className={styles.contactInformation}>
-          <p className={styles.contactSectionDescription}>
-            This is a template Figma file, turned into code using Anima. Learn
-            more at AnimaApp.com This is a template Figma file, turned into code
-            using Anima. Learn more at AnimaApp.com
-          </p>
-          <div className={styles.contactSocialMedias}>
-            <a className={styles.socialMediaLink} href="/">
-              <img
-                className={styles.socialMediaIcon}
-                src={DiscordIcon}
-                alt="Discord"
-                height={36}
-                width={36}
-              />
-            </a>
-            <a className={styles.socialMediaLink} href="/">
-              <img
-                className={styles.socialMediaIcon}
-                src={FacebookIcon}
-                alt="Facebook"
-                height={36}
-                width={36}
-              />
-            </a>
-            <a className={styles.socialMediaLink} href="/">
-              <img
-                className={styles.socialMediaIcon}
-                src={DribbleIcon}
-                alt="Dribble"
-                height={36}
-                width={36}
-              />
-            </a>
-            <a className={styles.socialMediaLink} href="/">
-              <img
-                className={styles.socialMediaIcon}
-                src={InstagramIcon}
-                alt="Instagram"
-                height={36}
-                width={36}
-              />
-            </a>
-            <a className={styles.socialMediaLink} href="/">
-              <img
-                className={styles.socialMediaIcon}
-                src={BehanceIcon}
-                alt="Behance"
-                height={36}
-                width={36}
-              />
-            </a>
+    <div className="container">
+      <section className={styles.contactSection} aria-label="Contact Section">
+        <h2 className={styles.contactSectionHeader}>Lets work together</h2>
+        <div className={styles.contactSectionContents}>
+          <div className={styles.contactInformation}>
+            <p className={styles.contactSectionDescription}>
+              This is a template Figma file, turned into code using Anima. Learn
+              more at AnimaApp.com This is a template Figma file, turned into
+              code using Anima. Learn more at AnimaApp.com
+            </p>
+            <div className={styles.contactSocialMedias}>
+              <a className={styles.socialMediaLink} href="/">
+                <img
+                  className={styles.socialMediaIcon}
+                  src={DiscordIcon}
+                  alt="Discord"
+                  height={36}
+                  width={36}
+                />
+              </a>
+              <a className={styles.socialMediaLink} href="/">
+                <img
+                  className={styles.socialMediaIcon}
+                  src={FacebookIcon}
+                  alt="Facebook"
+                  height={36}
+                  width={36}
+                />
+              </a>
+              <a className={styles.socialMediaLink} href="/">
+                <img
+                  className={styles.socialMediaIcon}
+                  src={DribbleIcon}
+                  alt="Dribble"
+                  height={36}
+                  width={36}
+                />
+              </a>
+              <a className={styles.socialMediaLink} href="/">
+                <img
+                  className={styles.socialMediaIcon}
+                  src={InstagramIcon}
+                  alt="Instagram"
+                  height={36}
+                  width={36}
+                />
+              </a>
+              <a className={styles.socialMediaLink} href="/">
+                <img
+                  className={styles.socialMediaIcon}
+                  src={BehanceIcon}
+                  alt="Behance"
+                  height={36}
+                  width={36}
+                />
+              </a>
+            </div>
           </div>
+          <ContactForm onSubmit={submitForm} />
         </div>
-        <ContactForm onSubmit={submitForm} />
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
 

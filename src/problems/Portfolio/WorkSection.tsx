@@ -14,14 +14,16 @@ export type WorkSectionProps = {
 
 function WorkSection(props: WorkSectionProps) {
   return (
-    <section className={styles.workSection} aria-label="Latest work">
-      <h2 className={styles.workSectionTitle}>{props.title}</h2>
-      <div className={styles.projectsContainer}>
-        {props.projects.map((project, index) => {
-          return <Project key={index} {...project} />;
-        })}
-      </div>
-    </section>
+    <div className="container">
+      <section className={styles.workSection} aria-label="Latest work">
+        <h2 className={styles.workSectionTitle}>{props.title}</h2>
+        <div className={styles.projectsContainer}>
+          {props.projects.map((project, index) => {
+            return <Project key={index} {...project} />;
+          })}
+        </div>
+      </section>
+    </div>
   );
 }
 
