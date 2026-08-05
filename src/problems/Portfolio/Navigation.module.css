@@ -1,0 +1,29 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  padding: var(--space-5) var(--space-5);
+}
+
+.navHome {
+  color: inherit;
+
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.right {
+  display: flex;
+  gap: var(--space-5);
+
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.navLink {
+  color: inherit;
+
+  text-decoration: none;
+}
