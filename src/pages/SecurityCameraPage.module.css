@@ -1,0 +1,12 @@
+.securityCameraPageWrapper {
+  background-color: white;
+  color: black;
+
+  header {
+    padding-top: var(--space-3);
+  }
+
+  footer {
+    padding-bottom: var(--space-3);
+  }
+}
