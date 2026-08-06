@@ -1,0 +1,76 @@
+.navContainer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: var(--space-2);
+  height: 100vh;
+  width: 50px;
+
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.verticalList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.navButton {
+  border: none;
+
+  background-color: inherit;
+
+  cursor: pointer;
+
+  & > * {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 0;
+  left: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  max-height: 0;
+  width: 500px;
+  padding: var(--space-4);
+
+  border: 0.5px solid grey;
+  border-radius: 5px;
+
+  visibility: hidden;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  &.open {
+    max-height: 400px;
+    visibility: visible;
+  }
+}
+
+.dropdownLinks {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  gap: var(--space-3);
+}
+
+.dropdownLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: inherit;
+}
+
+.dropdownIcon {
+  height: 2em;
+  width: 2em;
+}
