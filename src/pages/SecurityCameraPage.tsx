@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./SecurityCameraPage.module.css";
 import { SCNavigation } from "../problems/SecurityCameras";
+import { Outlet } from "react-router";
 
 function SecurityCameraPage() {
   return (
@@ -8,7 +9,9 @@ function SecurityCameraPage() {
       <header className={styles.sideBar}>
         <SCNavigation />
       </header>
-      <main className={styles.content}></main>
+      <main className={styles.content}>
+        <Outlet />
+      </main>
     </div>
   );
 }

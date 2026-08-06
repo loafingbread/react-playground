@@ -2,6 +2,7 @@ import { NavLink, Route, Routes } from "react-router";
 import "./App.css";
 import { HomePage, PortfolioTemplate, ProblemsPage } from "./pages";
 import SecurityCameraPage from "./pages/SecurityCameraPage";
+import { CamerasPage } from "./problems/SecurityCameras";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/problems" element={<ProblemsPage />} />
         <Route path="/portfolio-template" element={<PortfolioTemplate />} />
-        <Route path="/security-cameras" element={<SecurityCameraPage />} />
+        <Route path="/security-cameras" element={<SecurityCameraPage />}>
+          <Route path="/security-cameras/cameras" element={<CamerasPage />} />
+        </Route>
       </Routes>
     </>
   );

@@ -1,4 +1,6 @@
 .securityCameraPageWrapper {
+  display: flex;
+
   background-color: white;
   color: black;
 
@@ -9,4 +11,13 @@
   footer {
     padding-bottom: var(--space-3);
   }
+}
+
+.sideBar {
+  flex-shrink: 0;
+}
+
+.content {
+  flex-grow: 1;
+  /* min-width: 0; */
 }

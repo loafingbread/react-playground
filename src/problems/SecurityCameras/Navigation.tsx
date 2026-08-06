@@ -5,6 +5,7 @@ import { FaBell } from "react-icons/fa";
 import { GoQuestion, GoDeviceCameraVideo } from "react-icons/go";
 import { IoMdBug } from "react-icons/io";
 import { RxIdCard } from "react-icons/rx";
+import { Link } from "react-router";
 
 function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -50,38 +51,18 @@ function Dropdown(props: DropdownProps) {
   return (
     <nav className={`${styles.dropdown} ${props.isOpen ? styles.open : ""}`}>
       <section className={styles.dropdownLinks} aria-label="Navigation Links">
-        <a href="/cameras" className={styles.dropdownLink}>
+        <Link to="/security-cameras/cameras" className={styles.dropdownLink}>
           <GoDeviceCameraVideo className={styles.dropdownIcon} />
           <span>Cameras</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
+        </Link>
+        <Link to="/cameras" className={styles.dropdownLink}>
           <RxIdCard className={styles.dropdownIcon} />
           <span>Access</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
+        </Link>
+        <Link to="/cameras" className={styles.dropdownLink}>
           <GoDeviceCameraVideo className={styles.dropdownIcon} />
           <span>Cameras</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
-          <RxIdCard className={styles.dropdownIcon} />
-          <span>Access</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
-          <GoDeviceCameraVideo className={styles.dropdownIcon} />
-          <span>Cameras</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
-          <RxIdCard className={styles.dropdownIcon} />
-          <span>Access</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
-          <GoDeviceCameraVideo className={styles.dropdownIcon} />
-          <span>Cameras</span>
-        </a>
-        <a href="/cameras" className={styles.dropdownLink}>
-          <RxIdCard className={styles.dropdownIcon} />
-          <span>Access</span>
-        </a>
+        </Link>
       </section>
     </nav>
   );
